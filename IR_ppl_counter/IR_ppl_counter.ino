@@ -13,7 +13,6 @@
   to try and take account for employees who enter and exit
   through the entrance to clock in and out.
 */
-#include <Time.h>
 #include <SoftwareSerial.h>
 
 int ppl_in=0;// count of people in
@@ -81,7 +80,7 @@ void loop()
       ppl_out++;// increment count of ppl exiting
       if(ppl_in>=0)
       {
-        Serial.println(ppl_in);
+        Serial.println(ppl_in);// prevents negative #s from being displayed
       }
       state=0;       
       flag=false;     
